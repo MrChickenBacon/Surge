@@ -1,0 +1,123 @@
+﻿<html>
+<head>
+    <title>HomeOfChickenBacon</title>
+    <style>
+        * {
+            background-color: hotpink;
+            overflow: hidden;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        h1 {
+            text-align: center;
+            -webkit-animation: color 10s infinite; /* Safari 4+ */
+            -moz-animation: color 10s infinite; /* Fx 5+ */
+            -o-animation: color 10s infinite; /* Opera 12+ */
+            animation: color 10s infinite; /* IE 10+, Fx 29+ */
+        }
+        
+        pre {
+            -webkit-animation: run 10s infinite; /* Safari 4+ */
+            -moz-animation: run 10s infinite; /* Fx 5+ */
+            -o-animation: run 10s infinite; /* Opera 12+ */
+            animation: run 10s infinite; /* IE 10+, Fx 29+ */
+        }
+
+        img {
+            align-items: center;
+            -webkit-animation: cool 6s infinite; /* Safari 4+ */
+            -moz-animation: cool 6s infinite; /* Fx 5+ */
+            -o-animation: cool 6s infinite; /* Opera 12+ */
+            animation: cool 6s infinite; /* IE 10+, Fx 29+ */
+        }
+
+        @-webkit-keyframes run {
+            from {
+                transform: skewX(0deg) translateX(-550px);
+            }
+            to {
+                transform: skewX(0deg) translateX(1870px);
+            }
+        }
+
+        @-webkit-keyframes color {
+            0% {
+                color: hotpink;
+            }
+
+            0% {
+                font-size: 0;
+            }
+
+            100% {
+                font-size: 50px;
+            }
+
+            100% {
+                color: rebeccapurple;
+            }
+        }
+
+        @-webkit-keyframes cool {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+            25% {
+                transform: skewX(15deg);
+            }
+
+            50% {
+                transform: skewX(0deg) translateX(50px);
+            }
+
+            75% {
+                transform: skewX(15deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>ChickenBacon</h1>
+    <img src="YTsmall.gif" alt="CBlogo" class="center" onclick="play0()">
+    <pre onclick="play1()">
+        _________ ______________ ______________ ______________ __>_____
+       |========H|H============H|H============H|H============H|=H=====`)
+      =o------oo-^-oo--------oo-^-oo--------oo-^-oo--------oo-^o-o--o-o=
+</pre>
+
+    <audio id="audio" src="oink.wav"></audio>
+    <audio id="audio1" src="train.wav"></audio>
+
+    <script>
+        function play0() {
+            var audio = document.getElementById("audio");
+            audio.play();
+            console.log("sound played!");
+        }
+        function play1() {
+            var audio = document.getElementById("audio1");
+            audio.play();
+            console.log("sound played!");
+        }
+    </script>
+</body>
+</html>

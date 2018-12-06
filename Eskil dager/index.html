@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Eskil elsker dager</title>
+    <style>
+        * {
+            background-color: hotpink;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin: 5vh 35vw;
+        }
+
+        div {
+            position: relative;
+            text-align: center;            
+        }
+    </style>
+</head>
+<body onload="whatday()">
+    <h1>Hvilken dag er det idag?</h1>
+    <div>
+        <iframe id="1" width="85%" height="600vh" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </div>
+    <script type="text/javascript">
+        function whatday() {
+            var myDate = new Date();
+            if (myDate.getDay() === 1) document.getElementById("1").src = "http://eskil-mandag.surge.sh";
+            else if (myDate.getDay() === 2) document.getElementById("1").src = "http://eskil-tirsdag.surge.sh";
+            else if (myDate.getDay() === 3) document.getElementById("1").src = "https://www.youtube.com/embed/du-TY1GUFGk?version=3&loop=1&playlist=du-TY1GUFGk&autoplay=1";
+            else if (myDate.getDay() === 4) document.getElementById("1").src = "http://eskil-torsdag.surge.sh";
+            else if (myDate.getDay() === 5) document.getElementById("1").src = "http://eskil-fredag.surge.sh";
+            else if (myDate.getDay() === 6) document.getElementById("1").src = "https://www.youtube.com/embed/Ybogc4Cn38A?version=3&loop=1&playlist=Ybogc4Cn38A&autoplay=1";
+            else if (myDate.getDay() === 7) document.getElementById("1").src = "https://i.giphy.com/media/xT9IgOdxEm8gYoJblC/giphy.webp";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+<h2>Click on chickuns to play sound!</h2>
+<pre>
+    
+
+
+
+</pre>
+<div1>
+    <h1>WAV</h1>
+    <img src="YTsmall.gif" width="150" height="100" alt="CBlogo" class="center" onclick="play0()">
+</div1>
+<pre>
+    
+
+</pre>
+<div2>
+    <h1>mp3</h1>
+    <img src="YTsmall.gif" width="150" height="100" alt="CBlogo" class="center" onclick="play1()">
+</div2>
+<pre>
+    
+
+</pre>
+<div3>
+    <h1>Flac</h1>
+    <img src="YTsmall.gif" width="150" height="100" alt="CBlogo" class="center" onclick="play2()">
+</div3>
+
+<audio id="audio" src="oink.wav"></audio>
+<audio id="audio1" src="oink.mp3"></audio>
+<audio id="audio2" src="oink.flac"></audio>
+<script>
+    function play0() {
+        var audio = document.getElementById("audio");
+        audio.play();
+        console.log("WAV played!");
+    }
+
+    function play1() {
+        var audio = document.getElementById("audio1");
+        audio.play();
+        console.log("mp3 played!");
+    }
+
+    function play2() {
+        var audio = document.getElementById("audio2");
+        audio.play();
+        console.log("Flac played!");
+    }
+</script>
+</body>
+</html>
