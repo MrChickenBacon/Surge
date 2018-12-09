@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Party</title>
+    <style>
+        * {
+            overflow: hidden;
+        }
+
+        button {
+            margin: 5vh 20vw;
+        }
+
+        div {
+            position: relative;
+            text-align: center;            
+        }
+    </style>
+</head>
+<body>
+        <button onclick="party()">Go to the party</button>
+
+    <div>
+        <iframe id="1" width="1280px" height="715px" src="" frameborder="0" allow="accelerometer; autoplay; loop; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </div>
+    <script type="text/javascript">
+        function party() {
+            document.getElementById("1").src = "http://townparty.surge.sh";
+        }
+    </script>
+</body>
+</html>
