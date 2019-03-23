@@ -1,22 +1,21 @@
 <template>
   <div id="app">
     <Navbar></Navbar>
+    <BitcoinPrice></BitcoinPrice>
     <router-view/>
-    <br>
-    <router-link to="/bjarne" tag="button">Gå til Bjarne</router-link>
-    <TextBlock></TextBlock>
   </div>
 </template>
 
 <script>
-import TextBlock from "@/components/TextBlock";
 import Navbar from "@/components/Navbar";
+import BitcoinPrice from "@/components/BitcoinPrice";
+
 
 export default {
   name: "App",
   components: {
-    TextBlock,
-    Navbar
+    Navbar,
+    BitcoinPrice
   }
 };
 </script>
@@ -31,6 +30,7 @@ export default {
 }
 #quote {
   text-align: center;
+  text-shadow: rgb(255, 115, 0) 2px 0 5px;
 }
 #wea {
   text-align: center;

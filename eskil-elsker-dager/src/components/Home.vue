@@ -2,7 +2,7 @@
   <b-container fluid>
     <div class="hello">
       <h1 v-on:click="whatDay()">Hvilken dag er det idag?</h1>
-      <img width="auto" height="540" :src="getDay()" alt="altText">
+      <img width="auto" height="400" :src="getDay()" alt="picture not found">
     </div>
   </b-container>
 </template>
@@ -12,9 +12,8 @@ export default {
   name: "Home",
   data() {
     return {
-      msg: "Welcome to something...",
-      day: "",
-      place: "http://www.vg.no"
+      msg: "HOME",
+      day: ""
     };
   },
   mounted() {
@@ -23,18 +22,13 @@ export default {
   methods: {
     whatDay() {
       var myDate = new Date();
-
-      if (myDate.getDay() === 1) this.day = "mandag.jpg";
-      else if (myDate.getDay() === 2) this.day = "tirsdag.jpg";
-      else if (myDate.getDay() === 4)
-        this.day =
-          "/static/img/emil.042478a.png";
-      else if (myDate.getDay() === 3)
-        this.day =
-          "https://media3.giphy.com/media/3o7aD7KLo6jJF4VBhS/giphy.gif";
-      else if (myDate.getDay() === 5) this.day = "fredag.jpg";
-      else if (myDate.getDay() === 6) this.day = "lørdag.jpg";
-      else if (myDate.getDay() === 7) this.day = "søndag.jpg";
+      if      (myDate.getDay() === 1) this.day = "/static/img/mandag.jpg";
+      else if (myDate.getDay() === 2) this.day = "/static/img/tirsdag.jpg";
+      else if (myDate.getDay() === 3) this.day = "/static/img/wed.gif";
+      else if (myDate.getDay() === 4) this.day = "/static/img/torsdag.jpg";
+      else if (myDate.getDay() === 5) this.day = "/static/img/fredag.gif";
+      else if (myDate.getDay() === 6) this.day = "https://media.giphy.com/media/l3vRafNoQAX2d9HX2/giphy.gif";
+      else if (myDate.getDay() === 7) this.day = "https://media.giphy.com/media/xT9IgOdxEm8gYoJblC/giphy.gif";
     },
     getDay() {
       return this.day;
