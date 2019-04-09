@@ -35,9 +35,6 @@ export default {
 #wea {
   text-align: center;
 }
-body {
-  background-image: linear-gradient(to bottom, rgb(23, 162, 184), rgb(132, 59, 180));
-}
 
 * {
             -webkit-animation: colorchange 30s infinite; /* Safari 4+ */
@@ -47,11 +44,11 @@ body {
         }
 
 		@-webkit-keyframes colorchange {
-        0%   {background-image: linear-gradient(to bottom, rgb(23, 162, 184), rgb(132, 59, 180));}
-  		20%  {background-image: linear-gradient(to bottom, rgb(132, 59, 180), rgb(23, 162, 184))}
+      0%   {background-color:rgb(23, 162, 184);}
+  		20%  {background-color:hotpink;}
   		40%  {background-color:hotpink;}
   		60%  {background-color:rebeccapurple;}
   		80%  {background-color:limegreen;}
-  		100% {background-color:cyan;}
+  		100% {background-color:rgb(23, 162, 184);}
         }
 </style>
