@@ -1,8 +1,8 @@
 <template>
   <b-container fluid>
     <div class="hello">
-      <h1 v-on:click="whatDay()">Hvilken dag er det idag?</h1>
-      <img width="auto" height="400" :src="getDay()" alt="picture not found">
+      <h5 v-on:click="whatDay()">Hvilken dag er det idag?</h5>
+      <img style="width: 40vw" :src="getDay()" alt="picture not found">
     </div>
   </b-container>
 </template>
