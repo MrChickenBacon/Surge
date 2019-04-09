@@ -10,41 +10,66 @@
 	<script type="text/javascript" src="qrcode.js"></script>
 	<style>
 		* {
-			background-color: hotpink;
+			-webkit-animation: colorchange 60s infinite;
+			/* Safari 4+ */
+			-moz-animation: colorchange 60s infinite;
+			/* Fx 5+ */
+			-o-animation: colorchange 60s infinite;
+			/* Opera 12+ */
+			animation: colorchange 60s infinite;
+			/* IE 10+, Fx 29+ */
 		}
 
-		* {
-            -webkit-animation: colorchange 30s infinite; /* Safari 4+ */
-            -moz-animation: colorchange 30s infinite; /* Fx 5+ */
-            -o-animation: colorchange 30s infinite; /* Opera 12+ */
-            animation: colorchange 30s infinite; /* IE 10+, Fx 29+ */
-        }
-
 		@-webkit-keyframes colorchange {
-        0%   {background-color:cyan;}
-  		20%  {background-color:yellow;}
-  		40%  {background-color:hotpink;}
-  		60%  {background-color:rebeccapurple;}
-  		80%  {background-color:limegreen;}
-  		100% {background-color:cyan;}
-        }
-		
+			0% {
+				background-color: cyan;
+			}
+
+			20% {
+				background-color: yellow;
+			}
+
+			40% {
+				background-color: hotpink;
+			}
+
+			60% {
+				background-color: rebeccapurple;
+			}
+
+			80% {
+				background-color: limegreen;
+			}
+
+			100% {
+				background-color: cyan;
+			}
+		}
+
 		.codegang {
 			padding-top: 20%;
 			text-align: center;
 		}
 
+		h1 {
+			padding-top: 2%;
+			text-align: center;
+		}
 	</style>
 </head>
 
 <body>
+
+	<h1>Simple QR code generator</h1>
+
 	<div class="codegang">
-		<input id="text" type="text" value="http://www.vg.no" style="width:30%" /><br />
+		<input id="text" type="text" value="http://www.vg.no" style="width:30%" /> <br />
+		<button onclick="makeCode()">Create QR code</button> <br />
 		<div id="qrcode"></div>
-		<button onclick="makeCode()">Create QR code</button>
+
 	</div>
 
-<div id="a"></div>
+	<div id="a"></div>
 
 	<script type="text/javascript">
 		var qrcode = new QRCode(document.getElementById("qrcode"), {
