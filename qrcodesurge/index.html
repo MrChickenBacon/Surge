@@ -1,0 +1,79 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+	<title>Simple QRCode generator</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="qrcode.js"></script>
+	<style>
+		* {
+			background-color: hotpink;
+		}
+
+		* {
+            -webkit-animation: colorchange 30s infinite; /* Safari 4+ */
+            -moz-animation: colorchange 30s infinite; /* Fx 5+ */
+            -o-animation: colorchange 30s infinite; /* Opera 12+ */
+            animation: colorchange 30s infinite; /* IE 10+, Fx 29+ */
+        }
+
+		@-webkit-keyframes colorchange {
+        0%   {background-color:cyan;}
+  		20%  {background-color:yellow;}
+  		40%  {background-color:hotpink;}
+  		60%  {background-color:rebeccapurple;}
+  		80%  {background-color:limegreen;}
+  		100% {background-color:cyan;}
+        }
+		
+		.codegang {
+			padding-top: 20%;
+			text-align: center;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="codegang">
+		<input id="text" type="text" value="http://www.vg.no" style="width:30%" /><br />
+		<div id="qrcode"></div>
+		<button onclick="makeCode()">Create QR code</button>
+	</div>
+
+<div id="a"></div>
+
+	<script type="text/javascript">
+		var qrcode = new QRCode(document.getElementById("qrcode"), {
+			width: 150,
+			height: 150
+		});
+
+		function makeCode() {
+			var elText = document.getElementById("text");
+
+			if (!elText.value) {
+				alert("Input a text");
+				elText.focus();
+				return;
+			}
+
+			qrcode.makeCode(elText.value);
+		}
+
+			//makeCode();
+
+			// $("#text").
+			// 	on("blur", function () {
+			// 		makeCode();
+			// 	}).
+			// 	on("keydown", function (e) {
+			// 		if (e.keyCode == 13) {
+			// 			makeCode();
+			// 		}
+			// 	});
+	</script>
+</body>
