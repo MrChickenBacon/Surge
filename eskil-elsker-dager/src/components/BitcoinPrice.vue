@@ -3,13 +3,13 @@
     <img width="auto" height="50" src="/static/img/bitcoin.png" alt="Bitcoin Price">
     <div id="btcInfo"></div>
 
-    <!-- <div v-for="currency in info" class="currency">
+    <div v-for="currency in info" class="currency">
       {{ currency.description }}:
       <span class="lighten">
         <span v-html="currency.symbol"></span>
         {{ currency.rate_float | currencydecimal }}
-    </span>-->
-    <!-- </div> -->
+    </span>
+    </div>
   </div>
 </template>
 
@@ -33,8 +33,6 @@ export default {
     axios
       .get("https://api.coindesk.com/v1/bpi/currentprice.json")
       .then(response => (this.info = response.data.bpi));
-    var obj = JSON.parse(info);
-    document.getElementById("btcInfo").innerHTML = obj.bpi + ", " + obj.rate;
   }
 };
 </script>

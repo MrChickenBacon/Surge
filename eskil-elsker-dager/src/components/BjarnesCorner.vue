@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <img src="@/assets/emil.png">
+  <div id="bjarne">
+    <img id="pic" src="@/assets/emil.png">
     <h1>Hei?</h1>
     <button @click="$router.go(-1)">Back</button>
-    <router-link to="/bjarne2" tag="button">Gå til en annen Bjarne</router-link>
+    <router-link to="/bjarne2" tag="button">Gå til en annen Testside</router-link>
   </div>
 </template>
 
@@ -14,4 +14,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>

@@ -1,11 +1,11 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="info">
+    <b-navbar toggleable="lg" type="dark" variant="">
       <b-navbar-toggle target="nav_collapse"/>
 
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
-          <router-link to="/bjarne" tag="button">Gå til Bjarne</router-link>
+          <router-link to="/bjarne" tag="button">Testside</router-link>
 
           <!-- <b-nav-item href="#" disabled>Disabled</b-nav-item> -->
         </b-navbar-nav>

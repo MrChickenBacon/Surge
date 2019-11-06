@@ -36,19 +36,7 @@ export default {
   text-align: center;
 }
 
-* {
-            -webkit-animation: colorchange 30s infinite; /* Safari 4+ */
-            -moz-animation: colorchange 30s infinite; /* Fx 5+ */
-            -o-animation: colorchange 30s infinite; /* Opera 12+ */
-            animation: colorchange 30s infinite; /* IE 10+, Fx 29+ */
-        }
-
-		@-webkit-keyframes colorchange {
-      0%   {background-color:rgb(23, 162, 184);}
-  		20%  {background-color:hotpink;}
-  		40%  {background-color:hotpink;}
-  		60%  {background-color:rebeccapurple;}
-  		80%  {background-color:limegreen;}
-  		100% {background-color:rgb(23, 162, 184);}
-        }
+body {
+  background-image: linear-gradient(rebeccapurple, hotpink);
+}
 </style>
