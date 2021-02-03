@@ -1,0 +1,3 @@
+var images = ['https://upload.wikimedia.org/wikipedia/commons/b/b8/Cryptocurrency_logos.jpg', 'https://news.bitcoin.com/wp-content/uploads/2018/04/31301419_1951139275127922_1317447493964791808_n.png', 'https://d1e00ek4ebabms.cloudfront.net/production/85f47c37-c7f5-487c-8271-364af86aaa47.jpg'];
+
+   $('#container').append('<style>#container, .acceptContainer:before, .logoContainer:before {background: url(' + images[Math.floor(Math.random() * images.length)] + ') center fixed }');
